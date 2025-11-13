@@ -16,7 +16,7 @@ app.use(cors());
 // Serve frontend files
 app.use(express.static(path.join(__dirname, "public")));
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.post("/chat", async (req, res) => {
   try {
