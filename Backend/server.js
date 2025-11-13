@@ -36,12 +36,7 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-// Wildcard route → always serve frontend
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-// Correct PORT for Render
+// Start server
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
