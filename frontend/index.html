@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeadGPT - AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>DeadGPT</h1>
+        <div class="theme-toggle" id="theme-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="theme-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <span id="theme-text">Dark</span>
+        </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div id="chat-container">
+        <div class="welcome">
+            <h2>Welcome to DeadGPT</h2>
+            <p>Your AI assistant is ready to help you with any questions or tasks.<br>Start typing below to begin the conversation.</p>
+        </div>
+    </div>
+
+    <!-- Input Section -->
+    <div class="input-section">
+        <div class="input-container">
+            <button id="voice-btn" title="Voice input">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+            </button>
+            <textarea id="input" placeholder="Type your message here..." rows="1"></textarea>
+            <button id="ask">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
