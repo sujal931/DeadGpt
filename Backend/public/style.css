@@ -352,23 +352,138 @@ body.dark-mode #voice-btn:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        height: 100dvh; /* Use dynamic viewport height for mobile browsers */
+    }
+
     .header {
         padding: 12px 16px;
     }
 
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .theme-toggle {
+        padding: 4px 8px;
+    }
+
+    .theme-toggle span {
+        font-size: 12px;
+    }
+
+    .theme-toggle svg {
+        width: 16px;
+        height: 16px;
+    }
+
     #chat-container {
-        padding: 16px;
+        padding: 12px;
+    }
+
+    .welcome {
+        padding: 40px 16px;
+    }
+
+    .welcome h2 {
+        font-size: 20px;
+    }
+
+    .welcome p {
+        font-size: 13px;
     }
 
     .message {
         max-width: 85%;
+        font-size: 13px;
+        padding: 10px 14px;
     }
 
     .input-section {
-        padding: 12px 16px;
+        padding: 12px;
+    }
+
+    .input-container {
+        gap: 8px;
+    }
+
+    #input {
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    #voice-btn {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #voice-btn svg {
+        width: 18px;
+        height: 18px;
     }
 
     #ask {
-        padding: 12px 20px;
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 15px;
+    }
+
+    .theme-toggle span {
+        display: none; /* Hide text on very small screens */
+    }
+
+    .message {
+        max-width: 90%;
+        font-size: 13px;
+    }
+
+    .input-container {
+        gap: 6px;
+    }
+
+    #voice-btn {
+        padding: 8px;
+    }
+
+    #ask {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+/* Landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .welcome {
+        padding: 20px 16px;
+    }
+
+    .welcome h2 {
+        font-size: 18px;
+    }
+
+    #chat-container {
+        padding: 12px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    #voice-btn,
+    #ask,
+    .theme-toggle {
+        min-height: 44px; /* Apple's recommended touch target size */
+        min-width: 44px;
+    }
+
+    #input {
+        font-size: 16px; /* Prevent zoom on iOS */
     }
 }
